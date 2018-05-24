@@ -1,1 +1,1 @@
-gsutil cp gs://cloud-training-demos/sandiego/sensor_obs2008.csv.gz .
+gsutil cp gs://bdaproject1234/altmetric.csv.gz .
