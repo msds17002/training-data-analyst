@@ -67,7 +67,7 @@ public class CurrentConditions {
     fields.add(new TableFieldSchema().setName("highway").setType("STRING"));
     fields.add(new TableFieldSchema().setName("direction").setType("STRING"));
     fields.add(new TableFieldSchema().setName("lane").setType("INTEGER"));
-    fields.add(new TableFieldSchema().setName("speed").setType("FLOAT"));
+//     fields.add(new TableFieldSchema().setName("speed").setType("FLOAT"));
 //     fields.add(new TableFieldSchema().setName("sensorId").setType("STRING"));
     TableSchema schema = new TableSchema().setFields(fields);
 
@@ -96,7 +96,7 @@ public class CurrentConditions {
         row.set("highway", info.getHighway());
         row.set("direction", info.getDirection());
         row.set("lane", info.getLane());
-        row.set("speed", info.getSpeed());
+//         row.set("speed", info.getSpeed());
 //         row.set("sensorId", info.getSensorKey());
         c.output(row);
       }
