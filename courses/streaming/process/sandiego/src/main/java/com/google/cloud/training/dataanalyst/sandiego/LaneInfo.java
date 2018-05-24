@@ -8,7 +8,7 @@ public class LaneInfo {
   private String[] fields;
 
   private enum Field {
-    TIMESTAMP, LATITUDE, LONGITUDE, FREEWAY_ID, FREEWAY_DIR, LANE, SPEED;
+    TIMESTAMP, LATITUDE, LONGITUDE, FREEWAY_ID, FREEWAY_DIR, LANE;
   }
 
   public LaneInfo() {
@@ -80,7 +80,7 @@ public class LaneInfo {
     return Integer.parseInt(get(Field.LANE));
   }
 
-  public double getSpeed() {
-    return Double.parseDouble(get(Field.SPEED));
-  }
+//   public double getSpeed() {
+//     return Double.parseDouble(get(Field.SPEED));
+//   }
 }
