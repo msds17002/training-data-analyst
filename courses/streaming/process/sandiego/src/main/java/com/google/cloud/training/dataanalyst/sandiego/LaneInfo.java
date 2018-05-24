@@ -60,12 +60,12 @@ public class LaneInfo {
 //     return sb.substring(0, sb.length() - 1); // without trailing comma
 //   }
 
-  public double getLatitude() {
-    return Double.parseDouble(get(Field.LATITUDE));
+  public String getLatitude() {
+    return get(Field.LATITUDE);
   }
 
-  public double getLongitude() {
-    return Double.parseDouble(get(Field.LONGITUDE));
+  public String getLongitude() {
+    return get(Field.LONGITUDE);
   }
 
   public String getHighway() {
@@ -76,8 +76,8 @@ public class LaneInfo {
     return get(Field.FREEWAY_DIR);
   }
 
-  public int getLane() {
-    return Integer.parseInt(get(Field.LANE));
+  public String getLane() {
+    return get(Field.LANE);
   }
 
 //   public double getSpeed() {
