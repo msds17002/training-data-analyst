@@ -23,7 +23,7 @@ from google.cloud import pubsub
 
 TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 TOPIC = 'sandiego'
-INPUT = 'sensor_obs2008.csv.gz'
+INPUT = 'altmetric.csv.gz'
 
 def publish(publisher, topic, events):
    numobs = len(events)
