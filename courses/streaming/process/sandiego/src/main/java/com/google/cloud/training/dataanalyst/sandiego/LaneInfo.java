@@ -36,14 +36,14 @@ public class LaneInfo {
    * 
    * @return
    */
-  public String getSensorKey() {
-    StringBuilder sb = new StringBuilder();
-    for (int f = Field.LATITUDE.ordinal(); f <= Field.LANE.ordinal(); ++f) {
-      sb.append(fields[f]);
-      sb.append(',');
-    }
-    return sb.substring(0, sb.length() - 1); // without trailing comma
-  }
+//   public String getSensorKey() {
+//     StringBuilder sb = new StringBuilder();
+//     for (int f = Field.LATITUDE.ordinal(); f <= Field.LANE.ordinal(); ++f) {
+//       sb.append(fields[f]);
+//       sb.append(',');
+//     }
+//     return sb.substring(0, sb.length() - 1); // without trailing comma
+//   }
 
   /**
    * Create unique key for all the sensors for traffic in same direction at a
@@ -51,14 +51,14 @@ public class LaneInfo {
    * 
    * @return
    */
-  public String getLocationKey() {
-    StringBuilder sb = new StringBuilder();
-    for (int f = Field.LATITUDE.ordinal(); f <= Field.FREEWAY_DIR.ordinal(); ++f) {
-      sb.append(fields[f]);
-      sb.append(',');
-    }
-    return sb.substring(0, sb.length() - 1); // without trailing comma
-  }
+//   public String getLocationKey() {
+//     StringBuilder sb = new StringBuilder();
+//     for (int f = Field.LATITUDE.ordinal(); f <= Field.FREEWAY_DIR.ordinal(); ++f) {
+//       sb.append(fields[f]);
+//       sb.append(',');
+//     }
+//     return sb.substring(0, sb.length() - 1); // without trailing comma
+//   }
 
   public double getLatitude() {
     return Double.parseDouble(get(Field.LATITUDE));
