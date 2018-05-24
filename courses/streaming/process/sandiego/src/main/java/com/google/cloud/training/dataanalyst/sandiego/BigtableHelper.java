@@ -109,10 +109,10 @@ public class BigtableHelper {
         DateTime ts = fmt.parseDateTime(info.getTimestamp().replace('T', ' '));
 
         // key is HIGHWAY#DIR#LANE#REVTS
-        String key = info.getHighway() //
-            + "#" + info.getDirection() //
-            + "#" + info.getLane() //
-            + "#" + (Long.MAX_VALUE - ts.getMillis()); // reverse time stamp
+        String key = info.getTimestamp(); //
+//             + "#" + info.getDirection() //
+//             + "#" + info.getLane() //
+//             + "#" + (Long.MAX_VALUE - ts.getMillis()); // reverse time stamp
 
         // all the data is in a wide column table with only one column family
         List<Mutation> mutations = new ArrayList<>();
@@ -123,7 +123,7 @@ public class BigtableHelper {
         addCell(mutations, "direction", info.getDirection(), ts.getMillis());
         addCell(mutations, "lane", info.getLane(), ts.getMillis());
         addCell(mutations, "speed", info.getSpeed(), ts.getMillis());
-        addCell(mutations, "sensorId", info.getSensorKey(), ts.getMillis());
+//         addCell(mutations, "sensorId", info.getSensorKey(), ts.getMillis());
         c.output(KV.of(ByteString.copyFromUtf8(key), mutations));
       }
 
