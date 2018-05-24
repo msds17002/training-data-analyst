@@ -62,11 +62,11 @@ public class CurrentConditions {
     // Build the table schema for the output table.
     List<TableFieldSchema> fields = new ArrayList<>();
     fields.add(new TableFieldSchema().setName("timestamp").setType("TIMESTAMP"));
-    fields.add(new TableFieldSchema().setName("latitude").setType("FLOAT"));
-    fields.add(new TableFieldSchema().setName("longitude").setType("FLOAT"));
+    fields.add(new TableFieldSchema().setName("latitude").setType("STRING"));
+    fields.add(new TableFieldSchema().setName("longitude").setType("STRING"));
     fields.add(new TableFieldSchema().setName("highway").setType("STRING"));
     fields.add(new TableFieldSchema().setName("direction").setType("STRING"));
-    fields.add(new TableFieldSchema().setName("lane").setType("INTEGER"));
+    fields.add(new TableFieldSchema().setName("lane").setType("STRING"));
 //     fields.add(new TableFieldSchema().setName("speed").setType("FLOAT"));
 //     fields.add(new TableFieldSchema().setName("sensorId").setType("STRING"));
     TableSchema schema = new TableSchema().setFields(fields);
