@@ -117,10 +117,10 @@ public class BigtableHelper {
         // all the data is in a wide column table with only one column family
         List<Mutation> mutations = new ArrayList<>();
         addCell(mutations, "timestamp", info.getTimestamp(), ts.getMillis());
-        addCell(mutations, "latitude", info.getLatitude(), ts.getMillis());
-        addCell(mutations, "longitude", info.getLongitude(), ts.getMillis());
-        addCell(mutations, "highway", info.getHighway(), ts.getMillis());
-        addCell(mutations, "direction", info.getDirection(), ts.getMillis());
+        addCell(mutations, "id", info.getLatitude(), ts.getMillis());
+        addCell(mutations, "q1", info.getLongitude(), ts.getMillis());
+        addCell(mutations, "q2", info.getHighway(), ts.getMillis());
+        addCell(mutations, "q3", info.getDirection(), ts.getMillis());
         addCell(mutations, "q4", info.getLane(), ts.getMillis());
 //         addCell(mutations, "speed", info.getSpeed(), ts.getMillis());
 //         addCell(mutations, "sensorId", info.getSensorKey(), ts.getMillis());
