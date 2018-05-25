@@ -62,10 +62,10 @@ public class CurrentConditions {
     // Build the table schema for the output table.
     List<TableFieldSchema> fields = new ArrayList<>();
     fields.add(new TableFieldSchema().setName("timestamp").setType("TIMESTAMP"));
-    fields.add(new TableFieldSchema().setName("latitude").setType("STRING"));
-    fields.add(new TableFieldSchema().setName("longitude").setType("STRING"));
-    fields.add(new TableFieldSchema().setName("highway").setType("STRING"));
-    fields.add(new TableFieldSchema().setName("direction").setType("STRING"));
+    fields.add(new TableFieldSchema().setName("id").setType("STRING"));
+    fields.add(new TableFieldSchema().setName("q1").setType("STRING"));
+    fields.add(new TableFieldSchema().setName("q2").setType("STRING"));
+    fields.add(new TableFieldSchema().setName("q3").setType("STRING"));
     fields.add(new TableFieldSchema().setName("q4").setType("STRING"));
 //     fields.add(new TableFieldSchema().setName("speed").setType("FLOAT"));
 //     fields.add(new TableFieldSchema().setName("sensorId").setType("STRING"));
@@ -91,10 +91,10 @@ public class CurrentConditions {
         TableRow row = new TableRow();
         LaneInfo info = c.element();
         row.set("timestamp", info.getTimestamp());
-        row.set("latitude", info.getLatitude());
-        row.set("longitude", info.getLongitude());
-        row.set("highway", info.getHighway());
-        row.set("direction", info.getDirection());
+        row.set("id", info.getLatitude());
+        row.set("q1", info.getLongitude());
+        row.set("q2", info.getHighway());
+        row.set("q3", info.getDirection());
         row.set("q4", info.getLane());
 //         row.set("speed", info.getSpeed());
 //         row.set("sensorId", info.getSensorKey());
