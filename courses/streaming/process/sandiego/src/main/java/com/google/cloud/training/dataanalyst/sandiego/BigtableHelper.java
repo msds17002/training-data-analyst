@@ -121,7 +121,7 @@ public class BigtableHelper {
         addCell(mutations, "longitude", info.getLongitude(), ts.getMillis());
         addCell(mutations, "highway", info.getHighway(), ts.getMillis());
         addCell(mutations, "direction", info.getDirection(), ts.getMillis());
-        addCell(mutations, "lane", info.getLane(), ts.getMillis());
+        addCell(mutations, "q4", info.getLane(), ts.getMillis());
 //         addCell(mutations, "speed", info.getSpeed(), ts.getMillis());
 //         addCell(mutations, "sensorId", info.getSensorKey(), ts.getMillis());
         c.output(KV.of(ByteString.copyFromUtf8(key), mutations));
